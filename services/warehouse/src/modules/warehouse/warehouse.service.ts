@@ -1,5 +1,5 @@
-import { Injectable } from '@nestjs/common';
-import { Item } from './interfaces/item.interface';
+import { Injectable } from '@nestjs/common'
+import { Item } from './interfaces/item.interface'
 
 @Injectable()
 export class WarehouseService {
@@ -8,6 +8,6 @@ export class WarehouseService {
       id: 1,
       name: 'Stored item name',
       userId: 1,
-    };
+    }
   }
 }
