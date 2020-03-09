@@ -11,11 +11,9 @@ export class AuthService {
     private readonly userRepository: Repository<User>
   ) {}
 
-  signUpByEmail(firstName: string, lastName: string): Promise<User> {
-    const user = this.userRepository.create({
-      firstName,
-      lastName,
-    })
+  signUpByEmail(email: string, password: string): Promise<User> {
+    const userModel = User.generateFromEmail(email, password)
+    const user = this.userRepository.create(userModel)
     return this.userRepository.save(user)
   }
 }
