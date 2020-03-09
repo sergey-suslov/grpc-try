@@ -25,10 +25,18 @@
     "@nestjs/core": "^6.10.14",
     "@nestjs/microservices": "^6.11.11",
     "@nestjs/platform-express": "^6.10.14",
+    "@nestjs/typeorm": "^6.3.3",
+    "@types/express-pino-logger": "^4.0.2",
+    "@types/pino": "^5.15.5",
+    "express-pino-logger": "^4.0.0",
     "grpc": "^1.24.2",
+    "pg": "^7.18.2",
+    "pino": "^5.17.0",
+    "pino-pretty": "^3.6.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.5.4",
+    "typeorm": "^0.2.24"
   },
   "devDependencies": {
     "@nestjs/cli": "^6.13.2",

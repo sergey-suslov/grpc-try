@@ -1,4 +1,5 @@
-import { Controller, Get } from '@nestjs/common'
+import { Controller, Get, Inject } from '@nestjs/common'
+import { Logger } from 'pino'
 import { SaverService } from './saver.service'
 import { StoreItemResponse } from '../warehouse/interfaces/store-item-response.interface'
 
