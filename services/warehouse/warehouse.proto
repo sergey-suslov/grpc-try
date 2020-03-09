@@ -1,0 +1,23 @@
+syntax = "proto3";
+package warehouse;
+
+
+message Item {
+  int32 id = 1;
+  string name = 2;
+  int32 userId = 3;
+}
+
+message StoreItemRequest {
+  int32 userId = 1;
+  string name = 2;
+}
+
+message StoreItemResponse {
+  Item storedItem = 1;
+}
+
+
+service WarehouseService {
+  rpc StoreItem (StoreItemRequest) returns (StoreItemResponse) {}
+}
