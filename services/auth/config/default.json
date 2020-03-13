@@ -10,5 +10,10 @@
     "hash": {
       "length": 128
     }
+  },
+  "jwt": {
+    "lifetime": 300000,
+    "lifetimeRefresh": 604800000,
+    "secret": "masoidJA*Sdu98aUSHJFIuhas67ft8A&Sd90pas"
   }
 }

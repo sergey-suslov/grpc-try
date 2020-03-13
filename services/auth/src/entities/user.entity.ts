@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn } from 'typeorm'
 import { IsEmail } from 'class-validator'
-import { generateHash } from 'src/utils/crypto'
+import { generateHash, compareHashes } from 'src/utils/crypto'
 
 @Entity()
 export class User {
@@ -30,5 +30,9 @@ export class User {
     user.password = generates.hash
     user.salt = generates.salt
     return user
+  }
+
+  comparePasswords(password: string): boolean {
+    return compareHashes(password, this.password, this.salt)
   }
 }
