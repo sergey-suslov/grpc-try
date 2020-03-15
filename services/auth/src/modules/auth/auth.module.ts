@@ -6,8 +6,8 @@ import { User } from 'src/entities/user.entity'
 import { JWTService } from './shared/jwt.service'
 
 @Module({
-  imports: [TypeOrmModule.forFeature([User]), JWTService],
+  imports: [TypeOrmModule.forFeature([User])],
   controllers: [AuthController],
-  providers: [AuthService],
+  providers: [AuthService, JWTService],
 })
-export class AuthModule {}
+export class AuthModule { }

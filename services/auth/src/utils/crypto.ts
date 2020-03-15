@@ -1,5 +1,5 @@
-import {get} from 'config'
-import {randomBytes, pbkdf2Sync} from 'crypto'
+import { get } from 'config'
+import { randomBytes, pbkdf2Sync } from 'crypto'
 
 export const generateHash = (string: string): { salt: string; hash: string } => {
   const salt = randomBytes(get('crypto.hash.length')).toString('base64')
@@ -12,8 +12,7 @@ export const generateHash = (string: string): { salt: string; hash: string } => 
 }
 
 export const compareHashes = (income: string, hash: string, salt: string): boolean => {
-  const hashResult = pbkdf2Sync(income, salt, 12000, get('crypto.hash.length'), 'sha256')
-    .toString('base64')
+  const hashResult = pbkdf2Sync(income, salt, 12000, get('crypto.hash.length'), 'sha256').toString('base64')
   return hash === hashResult
 }
 
